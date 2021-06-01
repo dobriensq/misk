@@ -1,6 +1,6 @@
 package misk.zookeeper
-
 import com.google.common.util.concurrent.ThreadFactoryBuilder
+
 import misk.clustering.zookeeper.ZookeeperConfig
 import misk.clustering.zookeeper.asZkPath
 import org.apache.curator.ensemble.EnsembleProvider
@@ -64,6 +64,7 @@ internal class CuratorFrameworkProvider @Inject internal constructor(
             clientConfig.setProperty("zookeeper.ssl.keyStore.password", config.cert_store?.passphrase)
             clientConfig.setProperty("zookeeper.ssl.trustStore.location", config.trust_store?.resource)
             clientConfig.setProperty("zookeeper.ssl.trustStore.password", config.trust_store?.passphrase)
+            clientConfig.setProperty("zookeeper.ssl.protocol", "TLSv1.2")
           }
           ZooKeeper(connectString, sessionTimeout, watcher, canBeReadOnly, hostProvider.get(), clientConfig)
         }
