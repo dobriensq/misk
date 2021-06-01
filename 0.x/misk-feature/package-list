@@ -1,0 +1,5 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+$dokka.location:misk.feature$fromSafeJson(com.squareup.moshi.JsonAdapter((misk.feature.fromSafeJson.T)), kotlin.String)misk.feature/com.squareup.moshi.-json-adapter/from-safe-json.md
+$dokka.location:misk.feature$toSafeJson(com.squareup.moshi.JsonAdapter((misk.feature.toSafeJson.T)), misk.feature.toSafeJson.T)misk.feature/com.squareup.moshi.-json-adapter/to-safe-json.md
+misk.feature
